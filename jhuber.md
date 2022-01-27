@@ -1,6 +1,9 @@
 20.1.2022
+-------------------------
 GitHub Repository angelegt
+-------------------------
 Pflichtenheft bearbeitet
+-------------------------
 Klassendiagramm
 -------------------------
 
