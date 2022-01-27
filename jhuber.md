@@ -1,8 +1,11 @@
-20.1.2022
-GitHub Repository angelegt
-Pflichtenheft bearbeitet
-Klassendiagramm
+#20.1.2022 <br /> 
+GitHub Repository angelegt <br /> 
+Pflichtenheft bearbeitet <br /> 
+Klassendiagramm <br /> 
 
+---
 
-27.1.2022
-Klassendiagramm geupdated und hochgeladen
+#27.1.2022 <br /> 
+Klassendiagramm geupdated und hochgeladen <br /> 
+
+---
