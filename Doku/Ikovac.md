@@ -9,3 +9,9 @@ Was geaendert wurde: added Arbeitsbericht + Update von Pflichtenheft, wo wichtig
 Autor: Kovacevic Ismael<br />
 geanderte Dateien: Ikovacev.md;<br />
 Was geaendert wurde: Design von Arbeitsbericht geaendert<br />
+
+
+# 25.01.2022
+Autor: Kovacevic Ismael<br />
+geanderte Dateien: View Klassen;<br />
+Was geaendert wurde: Alle View Klassen wurden erstellt. Develop branch erstellt zum Testen<br />
