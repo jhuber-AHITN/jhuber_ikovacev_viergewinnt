@@ -7,3 +7,14 @@ https://app.genmymodel.com/editor/edit/_I133UHnyEeyzq6ra3GZCdA#
 ## 20.1.2022: Wittner 
 * Für jeden Schüler muss einen Arbeitsbericht als .md Datei enthalten sein 
 * Klassendiagramm ist besser in dieser Datei, ich habe einen Link oben eingefügt - Änderungen bitte auch hier kommentieren
+
+
+ Todoo:
+1.2.2022: Wittner
+Projekt umstrukturiert: die packages und Unterordner gelöscht, so dass die Sourcen nur
+unter 'src' bzw. 'src/model' stehen
+Projekteinstellungen korrigiert (muss sowieso jeder selbst machen, da die Dateien nicht versioniert sind)
+lib für JavaFX eingefügt
+Unter 'modules' auf der rechten Seite den 'src' Ordner korrigiert
+Unter Run Configuration die 'VM-Options' für fxml eingefügt
+main-Methode in Game eingefügt
