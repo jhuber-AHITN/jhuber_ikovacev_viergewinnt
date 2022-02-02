@@ -6,6 +6,6 @@ public class PlayerViewConsole implements PlayerView{
      */
     @Override
     public void PrintPlay(String player) {
-        System.out.println(player);
+        System.out.print(player);
     }
 }

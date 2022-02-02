@@ -4,6 +4,6 @@ public class FieldViewConsole implements FieldView {
 
     @Override
     public void Prientfield(String field) {
-        System.out.println(field);
+        System.out.print(field);
     }
 }
