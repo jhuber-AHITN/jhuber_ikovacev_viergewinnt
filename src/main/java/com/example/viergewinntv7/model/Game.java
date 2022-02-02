@@ -2,8 +2,11 @@ package com.example.viergewinntv7.model;
 
 import com.example.viergewinntv7.controller.ControllerConsole;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Game {
-    protected Player[] players  = new Player[2];
+    protected Player[] players = new Player[2];
     protected Player currentPLayer;
     protected Playfield playfield;
     protected int[] lastset = new int[2];
@@ -14,24 +17,19 @@ public class Game {
         this.playfield = playfield;
     }
 
-    public void set(int col){
+    public void set(int col) {
         playfield.setcell(playfield.checkcol(col), col);
         lastset[1] = col;
         lastset[0] = playfield.checkcol(col);
     }
 
-    public void undo(){
+    public void undo() {
         playfield.unsetcell(lastset[0], lastset[1]);
     }
 
-    public void reset(){
+    public void reset() {
         playfield.clear();
-        ControllerConsole.Initialize();
-    }
 
-
-    public void setPlayfield(Playfield playfield) {
-        this.playfield = playfield;
     }
 
 
