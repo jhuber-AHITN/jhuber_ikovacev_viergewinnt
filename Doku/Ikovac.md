@@ -16,6 +16,12 @@ Was geaendert wurde: Design von Arbeitsbericht geaendert<br />
 Autor: Kovacevic Ismael<br />
 geanderte Dateien: View Klassen;<br />
 Was geaendert wurde: Alle View Klassen wurden erstellt. Develop branch erstellt zum Testen<br />
+---
+
+# 26.01.2022-01.02.2022
+Autor: Kovacevic Ismael<br />
+geanderte Dateien: <br />
+Was geaendert wurde: Krankheitsbedingt ausgefallen<br />
 
 ---
 
