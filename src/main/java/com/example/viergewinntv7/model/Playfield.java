@@ -58,6 +58,42 @@ public class Playfield {
         fieldArray[row][col] = ' ';
     }
     public boolean CheckWin(Player toCheckIfWon){
-        return false;
+        boolean ret = false;
+
+        for (int i = 0; i < 6; i++){
+            for (int j = 0; j < 4; j++){
+                if (fieldArray[i][j] == toCheckIfWon.getSymbol() && fieldArray[i][j+1] == toCheckIfWon.getSymbol() && fieldArray[i][j+2] == toCheckIfWon.getSymbol() && fieldArray[i][j+3] == toCheckIfWon.getSymbol()){
+                    ret = true;
+                }
+            }
+        }
+
+        for (int i = 0; i < 7; i++){
+            for (int j = 0; j < 3; j++){
+                if (fieldArray[j][i] == toCheckIfWon.getSymbol() && fieldArray[j+1][i] == toCheckIfWon.getSymbol() && fieldArray[j+2][i] == toCheckIfWon.getSymbol() && fieldArray[j+3][i] == toCheckIfWon.getSymbol()){
+                    ret = true;
+                }
+            }
+        }
+
+        for (int i = 0; i < 3; i++){
+            for (int j = 0; j < 4; j++){
+                if (fieldArray[i][j] == toCheckIfWon.getSymbol() && fieldArray[i + 1][j + 1] == toCheckIfWon.getSymbol() && fieldArray[i + 2][j + 2] == toCheckIfWon.getSymbol() && fieldArray[i + 3][j + 3] == toCheckIfWon.getSymbol()) {
+                    ret = true;
+                }
+            }
+        }
+
+        for (int i = 0; i < 3; i++){
+            for (int j = 6; j >= 3; j--){
+                if (fieldArray[i][j] == toCheckIfWon.getSymbol() && fieldArray[i + 1][j - 1] == toCheckIfWon.getSymbol() && fieldArray[i + 2][j - 2] == toCheckIfWon.getSymbol() && fieldArray[i + 3][j - 3] == toCheckIfWon.getSymbol()) {
+                    ret = true;
+                }
+            }
+        }
+
+        return ret;
+
+
     }
 }
