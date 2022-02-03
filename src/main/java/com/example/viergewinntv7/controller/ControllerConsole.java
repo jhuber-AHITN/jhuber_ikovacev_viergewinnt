@@ -11,6 +11,7 @@
  * event...Objekt zur Ausgabe von Aufforderungen...
  * fieldView... Objekt zur Ausgabe des Spielfeldes
  * playerView... Objekt zur Ausgabe des Spielers
+ * fourWins... Objekt der Klasse "Game", das eigentliche Spiel
  */
 package com.example.viergewinntv7.controller;
 
