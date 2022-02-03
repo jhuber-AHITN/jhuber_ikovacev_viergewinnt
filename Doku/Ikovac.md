@@ -23,3 +23,10 @@ Was geaendert wurde: Alle View Klassen wurden erstellt. Develop branch erstellt 
 Autor: Kovacevic Ismael<br />
 geanderte Dateien: Game.java, Player.java ControllerConsole.java;<br />
 Was geaendert wurde: Methoden in der Model Klasse ausprogrammiert, Konsolenanwendung angefangen zu programmieren<br />
+
+---
+
+# 3.02.2022
+Autor: Kovacevic Ismael<br />
+geanderte Dateien: Game.java, Playfield.java, Player.java ControllerConsole.java;<br />
+Was geaendert wurde: In Zusammenarbeit mit Huber Model Klassen und Konsolen Anwendung fertig programmiert<br />
