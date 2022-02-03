@@ -1,5 +1,4 @@
 
-
 /*-----------------------------------------------------------------------------
  *              Hoehere Technische Bundeslehranstalt STEYR
  *           Fachrichtung Elektronik und Technische Informatik
@@ -17,6 +16,9 @@ package com.example.viergewinntv7.view;
 
 public class EventViewConsole implements EventView{
     @Override
+    /**
+     * Gibt das Event in der Konsole aus
+     */
     public void PrintEvent(String event) {
         System.out.println(event);
     }

@@ -1,3 +1,18 @@
+/*-----------------------------------------------------------------------------
+ *              Hoehere Technische Bundeslehranstalt STEYR
+ *           Fachrichtung Elektronik und Technische Informatik
+ *----------------------------------------------------------------------------*/
+/**
+ * Kurzbeschreibung
+ *
+ * @author  : jhuber, ikovacev
+ * @date    : 03.02.2022
+ *
+ * @details
+ *   "Play-Klasse" zum Spielen des 4Gewinnt
+ *
+ */
+
 package com.example.viergewinntv7.controller;
 
 import com.example.viergewinntv7.model.Game;
@@ -24,20 +39,18 @@ public class ControllerConsole {
 
 
         do {
-
-
             Game fourWins = Initialize();
             fourWins.RandomPlayer();
-            fieldView.Prientfield(fourWins.getPlayfield().toString());
+            fieldView.Prientfield(fourWins.GetPlayfield().toString());
 
 
-            while (!fourWins.getPlayfield().CheckWin(fourWins.getCurrentPLayer()) && !fourWins.getPlayfield().CheckDraw()) {
+            while (!fourWins.GetPlayfield().CheckWin(fourWins.GetCurrentPLayer()) && !fourWins.GetPlayfield().CheckDraw()) {
                 fourWins.SwitchPlayer();
                 do {
-                    playerView.PrintPlay("\n" + fourWins.getCurrentPLayer().getName());
+                    playerView.PrintPlay("\n" + fourWins.GetCurrentPLayer().GetName());
                     event.PrintEvent(" Select a column to place your Symbol: \n");
                     fourWins.SwitchPlayer();
-                    event.PrintEvent("If " + fourWins.getCurrentPLayer().getName() + " wants to undo their move press \"u\":\n");
+                    event.PrintEvent("If " + fourWins.GetCurrentPLayer().GetName() + " wants to undo their move press \"u\":\n");
                     fourWins.SwitchPlayer();
 
                     undo = input.next();
@@ -48,16 +61,16 @@ public class ControllerConsole {
                 } while ((choosenColumn < 0 || choosenColumn > 6) && !undo.equals("u"));
 
                 if (undo.equals("u")) {
-                    fourWins.undo();
+                    fourWins.Undo();
                 } else {
-                    fourWins.set(choosenColumn);
+                    fourWins.Set(choosenColumn);
                 }
 
 
-                fieldView.Prientfield(fourWins.getPlayfield().toString());
+                fieldView.Prientfield(fourWins.GetPlayfield().toString());
             }
-            if (!fourWins.getPlayfield().CheckDraw()) {
-                event.PrintEvent("\n" + fourWins.getCurrentPLayer().getName() + " won! GG!\n");
+            if (!fourWins.GetPlayfield().CheckDraw()) {
+                event.PrintEvent("\n" + fourWins.GetCurrentPLayer().GetName() + " won! GG!\n");
             } else {
                 event.PrintEvent("Sadly this looks like a draw! GG!\n");
             }
@@ -74,7 +87,7 @@ public class ControllerConsole {
      */
     public static Game Initialize() {
         Playfield toInitialize = new Playfield();
-        toInitialize.clear();
+        toInitialize.Clear();
         String playerUno;
         String playerUnoChar;
         String playerDos;

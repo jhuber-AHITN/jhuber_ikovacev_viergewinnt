@@ -9,13 +9,16 @@
  * @date    : 30.02.2022
  *
  * @details
- *   Ausgabe fuer Spielfeld....
+ *   Ausgabe fuer Spielfeld
  */
 package com.example.viergewinntv7.view;
 
 public class FieldViewConsole implements FieldView {
 
     @Override
+    /**
+     * Gibt Spielfeld aus
+     */
     public void Prientfield(String field) {
         System.out.print(field);
     }

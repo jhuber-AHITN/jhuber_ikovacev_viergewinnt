@@ -19,8 +19,6 @@
 
 package com.example.viergewinntv7.model;
 
-import java.util.Objects;
-
 public class Player {
     String name;
     Character symbol;
@@ -39,31 +37,15 @@ public class Player {
      * Gibt name zurück
      * @return name
      */
-    public String getName() {
+    public String GetName() {
         return name;
-    }
-
-    /**
-     * Setzt name auf den mitgegebenen Namen
-     * @param name Name
-     */
-    public void setName(String name) {
-        this.name = name;
     }
 
     /**
      * Gibt symbol zurück
      * @return symbol
      */
-    public Character getSymbol() {
+    public Character GetSymbol() {
         return symbol;
-    }
-
-    /**
-     * Setzt symbol auf den mitgebenen character
-     * @param symbol Symbol
-     */
-    public void setSymbol(Character symbol) {
-        this.symbol = symbol;
     }
 }

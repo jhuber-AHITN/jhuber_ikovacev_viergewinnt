@@ -16,6 +16,9 @@ package com.example.viergewinntv7.view;
 public class PlayerViewConsole implements PlayerView{
 
     @Override
+    /**
+     * Gibt mitgegeben Spielernamen aus
+     */
     public void PrintPlay(String player) {
         System.out.print(player);
     }

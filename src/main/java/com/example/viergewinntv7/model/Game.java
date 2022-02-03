@@ -18,11 +18,6 @@
 
 package com.example.viergewinntv7.model;
 
-import com.example.viergewinntv7.controller.ControllerConsole;
-
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class Game {
     protected Player[] players = new Player[2];
     protected Player currentPLayer;
@@ -45,24 +40,24 @@ public class Game {
      * Macht einen Spielzug in der mitgegebenen Spalte
      * @param col   Spalte
      */
-    public void set(int col) {
+    public void Set(int col) {
         lastset[1] = col;
-        lastset[0] = playfield.checkcol(col);
-        playfield.setcell(playfield.checkcol(col), col, currentPLayer.getSymbol());
+        lastset[0] = playfield.Checkcol(col);
+        playfield.SetCell(playfield.Checkcol(col), col, currentPLayer.GetSymbol());
     }
 
     /**
      * Macht den letzten Spielzug rückgängig
      */
-    public void undo() {
-        playfield.unsetcell(lastset[0], lastset[1]);
+    public void Undo() {
+        playfield.UnsetCell(lastset[0], lastset[1]);
     }
 
     /**
      * Gibt das Spielfeld zurück
      * @return Spielfeld
      */
-    public Playfield getPlayfield() {
+    public Playfield GetPlayfield() {
         return playfield;
     }
 
@@ -88,7 +83,7 @@ public class Game {
      * Gibt den currentPlayer zurück
      * @return  currentPlayer
      */
-    public Player getCurrentPLayer() {
+    public Player GetCurrentPLayer() {
         return currentPLayer;
     }
 }

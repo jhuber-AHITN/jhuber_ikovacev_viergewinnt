@@ -19,9 +19,6 @@
 
 package com.example.viergewinntv7.model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Playfield {
     protected char[][] fieldArray = new char[6][7];
     protected static int counter = 0;
@@ -29,7 +26,7 @@ public class Playfield {
     /**
      * Leert das Spielfeld
      */
-    public void clear() {
+    public void Clear() {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 fieldArray[i][j] = ' ';
@@ -64,7 +61,7 @@ public class Playfield {
      * @param col die Spalte
      * @return die Zeile
      */
-    public int checkcol(int col) {
+    public int Checkcol(int col) {
         int ret = 0;
 
         for (int i = 0; i < 6; ++i) {
@@ -82,7 +79,7 @@ public class Playfield {
      * @param col die Spalte in der sich die Zelle befindet
      * @param symbol das Symbol auf das gesetzt wird
      */
-    public void setcell(int row, int col, char symbol) {
+    public void SetCell(int row, int col, char symbol) {
         fieldArray[row][col] = symbol;
         counter++;
     }
@@ -92,7 +89,7 @@ public class Playfield {
      * @param row die Zeile in der sich die Zelle befindet
      * @param col die Spalte in der sich die Zelle befindet
      */
-    public void unsetcell(int row, int col) {
+    public void UnsetCell(int row, int col) {
         fieldArray[row][col] = ' ';
         counter--;
     }
@@ -107,7 +104,7 @@ public class Playfield {
 
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 4; j++) {
-                if (fieldArray[i][j] == toCheckIfWon.getSymbol() && fieldArray[i][j + 1] == toCheckIfWon.getSymbol() && fieldArray[i][j + 2] == toCheckIfWon.getSymbol() && fieldArray[i][j + 3] == toCheckIfWon.getSymbol()) {
+                if (fieldArray[i][j] == toCheckIfWon.GetSymbol() && fieldArray[i][j + 1] == toCheckIfWon.GetSymbol() && fieldArray[i][j + 2] == toCheckIfWon.GetSymbol() && fieldArray[i][j + 3] == toCheckIfWon.GetSymbol()) {
                     ret = true;
                 }
             }
@@ -115,7 +112,7 @@ public class Playfield {
 
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 3; j++) {
-                if (fieldArray[j][i] == toCheckIfWon.getSymbol() && fieldArray[j + 1][i] == toCheckIfWon.getSymbol() && fieldArray[j + 2][i] == toCheckIfWon.getSymbol() && fieldArray[j + 3][i] == toCheckIfWon.getSymbol()) {
+                if (fieldArray[j][i] == toCheckIfWon.GetSymbol() && fieldArray[j + 1][i] == toCheckIfWon.GetSymbol() && fieldArray[j + 2][i] == toCheckIfWon.GetSymbol() && fieldArray[j + 3][i] == toCheckIfWon.GetSymbol()) {
                     ret = true;
                 }
             }
@@ -123,7 +120,7 @@ public class Playfield {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 4; j++) {
-                if (fieldArray[i][j] == toCheckIfWon.getSymbol() && fieldArray[i + 1][j + 1] == toCheckIfWon.getSymbol() && fieldArray[i + 2][j + 2] == toCheckIfWon.getSymbol() && fieldArray[i + 3][j + 3] == toCheckIfWon.getSymbol()) {
+                if (fieldArray[i][j] == toCheckIfWon.GetSymbol() && fieldArray[i + 1][j + 1] == toCheckIfWon.GetSymbol() && fieldArray[i + 2][j + 2] == toCheckIfWon.GetSymbol() && fieldArray[i + 3][j + 3] == toCheckIfWon.GetSymbol()) {
                     ret = true;
                 }
             }
@@ -131,7 +128,7 @@ public class Playfield {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 6; j >= 3; j--) {
-                if (fieldArray[i][j] == toCheckIfWon.getSymbol() && fieldArray[i + 1][j - 1] == toCheckIfWon.getSymbol() && fieldArray[i + 2][j - 2] == toCheckIfWon.getSymbol() && fieldArray[i + 3][j - 3] == toCheckIfWon.getSymbol()) {
+                if (fieldArray[i][j] == toCheckIfWon.GetSymbol() && fieldArray[i + 1][j - 1] == toCheckIfWon.GetSymbol() && fieldArray[i + 2][j - 2] == toCheckIfWon.GetSymbol() && fieldArray[i + 3][j - 3] == toCheckIfWon.GetSymbol()) {
                     ret = true;
                 }
             }
