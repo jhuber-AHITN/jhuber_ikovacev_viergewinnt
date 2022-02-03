@@ -13,6 +13,10 @@ public class ControllerConsole {
     static FieldView fieldView = new FieldViewConsole();
     static PlayerView playerView = new PlayerViewConsole();
 
+    /**
+     * "Play-Methode", hier wird das Spiel gespielt
+     *
+     */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String undo;
@@ -41,11 +45,11 @@ public class ControllerConsole {
                     choosenColumn = Integer.parseInt(undo);
                     }
 
-                } while ((choosenColumn < 0 || choosenColumn  > 6) && !undo.equals("u"));
+                } while ((choosenColumn < 0 || choosenColumn > 6) && !undo.equals("u"));
 
-                if (undo.equals("u")){
+                if (undo.equals("u")) {
                     fourWins.undo();
-                } else{
+                } else {
                     fourWins.set(choosenColumn);
                 }
 
@@ -64,6 +68,10 @@ public class ControllerConsole {
         }while(Objects.equals(input.nextLine(), "R"));
     }
 
+    /**
+     * Initialisiert das Spiel 4Gewinnt
+     * @return ein Objekt der Klasse Game
+     */
     public static Game Initialize() {
         Playfield toInitialize = new Playfield();
         toInitialize.clear();
