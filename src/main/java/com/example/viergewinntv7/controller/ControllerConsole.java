@@ -14,24 +14,50 @@ public class ControllerConsole {
     static PlayerView playerView = new PlayerViewConsole();
 
     public static void main(String[] args) {
-        Scanner columnChoose = new Scanner(System.in);
-        Integer choosenColumn;
-        Game fourWins = Initialize();
-        fourWins.RandomPlayer();
-        fieldView.Prientfield(fourWins.getPlayfield().toString());
+        Scanner input = new Scanner(System.in);
+        String undo;
+        Integer choosenColumn = 0;
 
 
-        while (!fourWins.getPlayfield().CheckWin(fourWins.getCurrentPLayer())) {
-            fourWins.SwitchPlayer();
-           do {
-                playerView.PrintPlay(fourWins.getCurrentPLayer().getName());
-                event.PrintEvent("Select a column to place your Symbol: ");
-                choosenColumn = Integer.parseInt(columnChoose.nextLine());
-            } while (choosenColumn < 0 || choosenColumn > 6);
-            fourWins.set(choosenColumn);
+        do {
+
+
+            Game fourWins = Initialize();
+            fourWins.RandomPlayer();
             fieldView.Prientfield(fourWins.getPlayfield().toString());
-        }
 
+
+            while (!fourWins.getPlayfield().CheckWin(fourWins.getCurrentPLayer())) {
+                fourWins.SwitchPlayer();
+                do {
+                    playerView.PrintPlay("\n" + fourWins.getCurrentPLayer().getName());
+                    event.PrintEvent(" Select a column to place your Symbol: \n");
+                    fourWins.SwitchPlayer();
+                    event.PrintEvent("If " + fourWins.getCurrentPLayer().getName() + " wants to undo their move press \"u\":\n");
+                    fourWins.SwitchPlayer();
+
+                    undo = input.nextLine();
+                    if (!undo.equals("u")){
+                    choosenColumn = Integer.parseInt(undo);
+                    }
+
+                } while ((choosenColumn < 0 || choosenColumn  > 6) && !undo.equals("u"));
+
+                if (undo.equals("u")){
+                    fourWins.undo();
+                } else{
+                    fourWins.set(choosenColumn);
+                }
+
+
+                fieldView.Prientfield(fourWins.getPlayfield().toString());
+            }
+            event.PrintEvent("\n" + fourWins.getCurrentPLayer().getName() + " won!\n");
+
+            event.PrintEvent("Do you want to restart?\n" +
+                             "If yes (r)\n" +
+                             "If not (n)\n");
+        }while(Objects.equals(input.nextLine(), "r"));
     }
 
     public static Game Initialize() {
