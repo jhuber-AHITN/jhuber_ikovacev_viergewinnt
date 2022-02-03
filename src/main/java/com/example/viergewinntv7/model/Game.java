@@ -37,9 +37,19 @@ public class Game {
         return playfield;
     }
 
-    public int RandomPlayer(){
-        return (int) Math.floor(Math.random()*(1-0+1)+0);
+    public void RandomPlayer() {
+        currentPLayer = players[(int) Math.floor(Math.random() * (1 - 0 + 1) + 0)];
     }
 
+    public void SwitchPlayer() {
+        if (currentPLayer == players[0]) {
+            currentPLayer = players[1];
+        } else {
+            currentPLayer = players[0];
+        }
+    }
 
+    public Player getCurrentPLayer() {
+        return currentPLayer;
+    }
 }

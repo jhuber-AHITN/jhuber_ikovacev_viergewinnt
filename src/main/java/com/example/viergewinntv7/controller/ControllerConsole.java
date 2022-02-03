@@ -14,10 +14,29 @@ public class ControllerConsole {
     static PlayerView playerView = new PlayerViewConsole();
 
     public static void main(String[] args) {
+        Scanner columnChoose = new Scanner(System.in);
+        Integer choosenColumn;
         Game fourWins = Initialize();
+        fourWins.RandomPlayer();
+        fieldView.Prientfield(fourWins.getPlayfield().toString());
+
+
+        while (!fourWins.getPlayfield().CheckWin(fourWins.getCurrentPLayer())) {
+            fourWins.SwitchPlayer();
+           do {
+                playerView.PrintPlay(fourWins.getCurrentPLayer().getName());
+                event.PrintEvent("Select a column to place your Symbol: ");
+                choosenColumn = Integer.parseInt(columnChoose.nextLine());
+            } while (choosenColumn < 0 || choosenColumn > 6);
+            fourWins.set(choosenColumn);
+            fieldView.Prientfield(fourWins.getPlayfield().toString());
+        }
+
     }
 
     public static Game Initialize() {
+        Playfield toInitialize = new Playfield();
+        toInitialize.clear();
         String playerUno;
         String playerUnoChar;
         String playerDos;
@@ -27,30 +46,30 @@ public class ControllerConsole {
         event.PrintEvent("Welcome to 4 Wins");
 
         event.PrintEvent("Player 1, please enter your name:");
-        playerUno=scanner.nextLine();
+        playerUno = scanner.nextLine();
         event.PrintEvent("Player 1, please choose your Char (press spacebar and enter you'll be 'x'):");
-        playerUnoChar=scanner.nextLine();
+        playerUnoChar = scanner.nextLine();
 
         do {
             event.PrintEvent("Player 2, please enter a different name:");
-            playerDos=scanner.nextLine();
-            if (Objects.equals(playerUnoChar, "")){
-               playerUnoChar="x";
+            playerDos = scanner.nextLine();
+            if (Objects.equals(playerUnoChar, "")) {
+                playerUnoChar = "x";
             }
 
-        }while (playerUno.equals(playerDos));
+        } while (playerUno.equals(playerDos));
 
         do {
             event.PrintEvent("Player 2, please choose your Char (press spacebar and enter you'll be 'O'):");
-            playerDosChar=scanner.nextLine();
+            playerDosChar = scanner.nextLine();
             System.out.println(playerDosChar);
-           if (Objects.equals(playerDosChar, "")){
-                playerDosChar="O";
+            if (Objects.equals(playerDosChar, "")) {
+                playerDosChar = "O";
             }
 
-        }while (Objects.equals(playerUnoChar, playerDosChar));
+        } while (Objects.equals(playerUnoChar, playerDosChar));
 
-        return new Game(new Player(playerUno,playerUnoChar.charAt(0)),new Player(playerDos,playerDosChar.charAt(0)),new Playfield());
+        return new Game(new Player(playerUno, playerUnoChar.charAt(0)), new Player(playerDos, playerDosChar.charAt(0)), toInitialize);
 
     }
 

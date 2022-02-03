@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Playfield {
-    protected char[][] fieldArray = new char[7][6];
+    protected char[][] fieldArray = new char[6][7];
 
     /**
      * Clears the Playfield
      */
     public void clear() {
-        for (int i = 0; i < 7; i++) {
-            for (int j = 0; j < 6; j++) {
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 7; j++) {
                 fieldArray[i][j] = ' ';
             }
         }
@@ -30,7 +30,7 @@ public class Playfield {
                 ret.append("\n|");
             }
             for (int j = 0; j < 7; j++) {
-                ret.append(fieldArray[j][i]).append("|");
+                ret.append(fieldArray[i][j]).append("|");
             }
         }
 
@@ -41,7 +41,7 @@ public class Playfield {
     public int checkcol(int col){
         int ret = 0;
 
-        for (int i = 6; i >= 0; --i){
+        for (int i = 0; i < 6; ++i){
             if (fieldArray[i][col] == ' '){
                 ret = i;
             }
@@ -56,5 +56,8 @@ public class Playfield {
 
     public void unsetcell(int row, int col){
         fieldArray[row][col] = ' ';
+    }
+    public boolean CheckWin(Player toCheckIfWon){
+        return false;
     }
 }
