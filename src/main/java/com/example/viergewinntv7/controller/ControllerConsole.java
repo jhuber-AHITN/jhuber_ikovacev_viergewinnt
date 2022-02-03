@@ -27,7 +27,7 @@ public class ControllerConsole {
             fieldView.Prientfield(fourWins.getPlayfield().toString());
 
 
-            while (!fourWins.getPlayfield().CheckWin(fourWins.getCurrentPLayer())) {
+            while (!fourWins.getPlayfield().CheckWin(fourWins.getCurrentPLayer()) && !fourWins.getPlayfield().CheckDraw()) {
                 fourWins.SwitchPlayer();
                 do {
                     playerView.PrintPlay("\n" + fourWins.getCurrentPLayer().getName());
@@ -36,7 +36,7 @@ public class ControllerConsole {
                     event.PrintEvent("If " + fourWins.getCurrentPLayer().getName() + " wants to undo their move press \"u\":\n");
                     fourWins.SwitchPlayer();
 
-                    undo = input.nextLine();
+                    undo = input.next();
                     if (!undo.equals("u")){
                     choosenColumn = Integer.parseInt(undo);
                     }
@@ -52,12 +52,16 @@ public class ControllerConsole {
 
                 fieldView.Prientfield(fourWins.getPlayfield().toString());
             }
-            event.PrintEvent("\n" + fourWins.getCurrentPLayer().getName() + " won!\n");
+            if (!fourWins.getPlayfield().CheckDraw()) {
+                event.PrintEvent("\n" + fourWins.getCurrentPLayer().getName() + " won! GG!\n");
+            } else {
+                event.PrintEvent("Sadly this looks like a draw! GG!\n");
+            }
 
             event.PrintEvent("Do you want to restart?\n" +
-                             "If yes (r)\n" +
-                             "If not (n)\n");
-        }while(Objects.equals(input.nextLine(), "r"));
+                             "If yes (R)\n" +
+                             "If not (N)\n");
+        }while(Objects.equals(input.nextLine(), "R"));
     }
 
     public static Game Initialize() {
