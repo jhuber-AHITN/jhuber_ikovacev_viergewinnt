@@ -36,4 +36,10 @@ public class Game {
     public Playfield getPlayfield() {
         return playfield;
     }
+
+    public int RandomPlayer(){
+        return (int) Math.floor(Math.random()*(1-0+1)+0);
+    }
+
+
 }

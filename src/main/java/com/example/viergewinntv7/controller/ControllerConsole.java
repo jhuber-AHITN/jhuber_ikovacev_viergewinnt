@@ -15,7 +15,6 @@ public class ControllerConsole {
 
     public static void main(String[] args) {
         Game fourWins = Initialize();
-        System.out.println(fourWins.toString());
     }
 
     public static Game Initialize() {
