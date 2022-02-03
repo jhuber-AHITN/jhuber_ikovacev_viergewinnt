@@ -18,3 +18,12 @@ lib für JavaFX eingefügt
 Unter 'modules' auf der rechten Seite den 'src' Ordner korrigiert
 Unter Run Configuration die 'VM-Options' für fxml eingefügt
 main-Methode in Game eingefügt
+
+## 3.2.2020: Wittner:
+* Haben Sie meine Umstrukturierung verworfen? Wenn ja, warum?
+* 's' Am Ende führt zu Ende des Programmes
+* Klassen müssen auch dokumentiert werden
+* CheckWin Methode SEHR ineffizient!
+* ein paar TODO-Anmerkungen!
+
+

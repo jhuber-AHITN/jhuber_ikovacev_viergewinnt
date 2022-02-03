@@ -20,14 +20,14 @@
 package com.example.viergewinntv7.model;
 
 public class Playfield {
-    protected char[][] fieldArray = new char[6][7];
+    protected char[][] fieldArray = new char[6][7]; // TODO Wittner: Konstanten für Größe!!!
     protected static int counter = 0;
 
     /**
      * Leert das Spielfeld
      */
     public void Clear() {
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 6; i++) {   // TODO Wittner: Konstanten für Schleifen!!
             for (int j = 0; j < 7; j++) {
                 fieldArray[i][j] = ' ';
             }
@@ -144,10 +144,13 @@ public class Playfield {
      * @return true-wenn unentschieden / false-wenn nicht unentschieden
      */
     public boolean CheckDraw() {
-        boolean ret = false;
-        if (counter == 42) {
+     /*   boolean ret = false;
+        if (counter == 42) {  // TODO Wittner: 42 durch Konstanten ersezten
             ret = true;
         }
         return ret;
+
+      */
+        return counter==42; // TODO Wittner: es darf auch schön programmiert werden!
     }
 }
