@@ -78,7 +78,8 @@ public class ControllerConsole {
             event.PrintEvent("Do you want to restart?\n" +
                              "If yes (R)\n" +
                              "If not (N)\n");
-        }while(Objects.equals(input.nextLine(), "R"));
+            undo = input.next();
+        }while(undo.equals("R"));
     }
 
     /**
