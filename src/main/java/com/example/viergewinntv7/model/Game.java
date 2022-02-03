@@ -18,7 +18,7 @@ public class Game {
     }
 
     public void set(int col) {
-        playfield.setcell(playfield.checkcol(col), col);
+        playfield.setcell(playfield.checkcol(col), col, currentPLayer.getSymbol());
         lastset[1] = col;
         lastset[0] = playfield.checkcol(col);
     }

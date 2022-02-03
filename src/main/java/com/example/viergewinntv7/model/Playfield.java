@@ -37,4 +37,24 @@ public class Playfield {
         return ret.toString();
 
     }
+
+    public int checkcol(int col){
+        int ret = 0;
+
+        for (int i = 6; i >= 0; --i){
+            if (fieldArray[i][col] == ' '){
+                ret = i;
+            }
+        }
+
+        return ret;
+    }
+
+    public void setcell(int row, int col, char symbol){
+        fieldArray[row][col] = symbol;
+    }
+
+    public void unsetcell(int row, int col){
+        fieldArray[row][col] = ' ';
+    }
 }
