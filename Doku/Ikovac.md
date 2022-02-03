@@ -19,7 +19,7 @@ Was geaendert wurde: Alle View Klassen wurden erstellt. Develop branch erstellt 
 
 ---
 
-# 2.01.2022
+# 2.02.2022
 Autor: Kovacevic Ismael<br />
 geanderte Dateien: Game.java, Player.java ControllerConsole.java;<br />
 Was geaendert wurde: Methoden in der Model Klasse ausprogrammiert, Konsolenanwendung angefangen zu programmieren<br />
