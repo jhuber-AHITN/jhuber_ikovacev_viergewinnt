@@ -16,6 +16,7 @@ Was geaendert wurde: Design von Arbeitsbericht geaendert<br />
 Autor: Kovacevic Ismael<br />
 geanderte Dateien: View Klassen;<br />
 Was geaendert wurde: Alle View Klassen wurden erstellt. Develop branch erstellt zum Testen<br />
+
 ---
 
 # 26.01.2022-01.02.2022
@@ -36,3 +37,19 @@ Was geaendert wurde: Methoden in der Model Klasse ausprogrammiert, Konsolenanwen
 Autor: Kovacevic Ismael<br />
 geanderte Dateien: Game.java, Playfield.java, Player.java ControllerConsole.java;<br />
 Was geaendert wurde: In Zusammenarbeit mit Huber Model Klassen und Konsolen Anwendung fertig programmiert<br />
+
+---
+
+# 10.02.2022
+Autor: Kovacevic Ismael<br />
+geanderte Dateien: HelloController, hello-view;<br />
+Was geaendert wurde: added FXML file, erste designs<br />
+
+---
+
+# 11.02.2022
+Autor: Kovacevic Ismael<br />
+geanderte Dateien: HelloController, hello-view.fxml, playfield.fxml;<br />
+Was geaendert wurde: added FXML file, design added Playfield in "main" dxml file<br />
+
+---
