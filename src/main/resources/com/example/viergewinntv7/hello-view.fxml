@@ -6,18 +6,60 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="421.0" prefWidth="627.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.viergewinntv7.HelloController">
+<VBox alignment="CENTER" prefHeight="435.0" prefWidth="754.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.viergewinntv7.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <VBox prefHeight="577.0" prefWidth="329.0">
+   <VBox prefHeight="378.0" prefWidth="682.0">
       <children>
-         <HBox prefHeight="276.0" prefWidth="486.0">
+         <HBox prefHeight="308.0" prefWidth="708.0">
             <children>
-               <HBox fx:id="HboxPlaying" prefHeight="307.0" prefWidth="345.0" />
-               <VBox prefHeight="276.0" prefWidth="234.0">
+               <VBox>
                   <children>
-                     <Label alignment="CENTER" prefHeight="33.0" prefWidth="233.0" text="Welcome to 4 Wins" />
+                     <VBox>
+                        <children>
+                           <HBox fx:id="HboxForButtons" prefHeight="27.0" prefWidth="475.0">
+                              <children>
+                                 <Button mnemonicParsing="false" text="1">
+                                    <HBox.margin>
+                                       <Insets left="50.0" />
+                                    </HBox.margin>
+                                 </Button>
+                                 <Button mnemonicParsing="false" text="2">
+                                    <HBox.margin>
+                                       <Insets left="50.0" />
+                                    </HBox.margin>
+                                 </Button>
+                                 <Button mnemonicParsing="false" text="3">
+                                    <HBox.margin>
+                                       <Insets left="50.0" />
+                                    </HBox.margin>
+                                 </Button>
+                                 <Button mnemonicParsing="false" text="4">
+                                    <HBox.margin>
+                                       <Insets left="50.0" />
+                                    </HBox.margin>
+                                 </Button>
+                                 <Button mnemonicParsing="false" text="5">
+                                    <HBox.margin>
+                                       <Insets left="50.0" />
+                                    </HBox.margin>
+                                 </Button>
+                                 <Button mnemonicParsing="false" text="6">
+                                    <HBox.margin>
+                                       <Insets left="50.0" />
+                                    </HBox.margin>
+                                 </Button>
+                              </children>
+                           </HBox>
+                           <HBox fx:id="HboxPlaying" prefHeight="260.0" prefWidth="602.0" />
+                        </children>
+                     </VBox>
+                  </children>
+               </VBox>
+               <VBox prefHeight="308.0" prefWidth="366.0">
+                  <children>
+                     <Label alignment="CENTER" prefHeight="34.0" prefWidth="302.0" text="Welcome to 4 Wins" />
                      <Label alignment="CENTER" prefHeight="26.0" prefWidth="233.0" text="Let the better player win!" />
                      <HBox>
                         <VBox.margin>

@@ -27,4 +27,5 @@ public class HelloController {
         Pane newLoadedPane =        FXMLLoader.load(u);
         HboxPlaying.getChildren().add(newLoadedPane);
     }
+
 }
