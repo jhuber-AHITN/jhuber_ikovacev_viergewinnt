@@ -1,14 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.viergewinntv7.HelloController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="268.0" prefWidth="364.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.viergewinntv7.UserLogin">
+   <children>
+      <Label fx:id="InfoText" layoutY="33.0" prefHeight="25.0" prefWidth="149.0" text="Player Name:" AnchorPane.topAnchor="33.0">
+         <padding>
+            <Insets left="25.0" />
+         </padding>
+      </Label>
+      <VBox fx:id="VboxForLogin" layoutX="3.0" layoutY="4.0" prefHeight="171.0" prefWidth="355.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="98.0" prefWidth="365.0">
+               <children>
+                  <TextField fx:id="PlayerName" prefHeight="25.0" prefWidth="163.0">
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="103.0" prefWidth="295.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="88.0" prefWidth="120.0" text="Choose a Color:">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#ButtonPressed" text="R" textFill="#f81111">
+                     <HBox.margin>
+                        <Insets left="50.0" top="32.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#ButtonPressed" text="B" textFill="#0015ff">
+                     <HBox.margin>
+                        <Insets left="10.0" top="32.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#ButtonPressed" text="G" textFill="#1eff00">
+                     <HBox.margin>
+                        <Insets left="10.0" top="32.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#ButtonPressed" text="S">
+                     <HBox.margin>
+                        <Insets left="10.0" top="32.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#ButtonPressed" text="L" textFill="#9200ff">
+                     <HBox.margin>
+                        <Insets left="10.0" top="32.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="PlayerButton" layoutX="139.0" layoutY="207.0" mnemonicParsing="false" onAction="#CreatePlayer" text="Create Player" />
+      <Label fx:id="ErrorMSG" alignment="CENTER" layoutX="-2.0" layoutY="232.0" prefHeight="17.0" prefWidth="364.0" textFill="RED" />
+   </children>
 </AnchorPane>
