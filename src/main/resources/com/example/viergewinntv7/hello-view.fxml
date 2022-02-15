@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 
 <VBox alignment="CENTER" prefHeight="435.0" prefWidth="754.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.viergewinntv7.HelloController">
     <padding>
@@ -87,7 +88,11 @@
                      <HBox>
                         <children>
                            <Label fx:id="PlayersTurnName" alignment="CENTER" contentDisplay="TOP" prefHeight="17.0" prefWidth="115.0" text="PlayerName" />
-                           <Label fx:id="PlayersTurnSymbol" alignment="CENTER" contentDisplay="TOP" prefHeight="17.0" prefWidth="115.0" text="PlayerSymbol" />
+                           <Circle fx:id="PlayerIndicator" fill="WHITE" radius="11.0" stroke="BLACK" strokeType="INSIDE">
+                              <HBox.margin>
+                                 <Insets left="50.0" />
+                              </HBox.margin>
+                           </Circle>
                         </children>
                         <VBox.margin>
                            <Insets top="25.0" />

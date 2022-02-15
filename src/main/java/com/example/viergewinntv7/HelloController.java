@@ -12,6 +12,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -31,6 +33,8 @@ public class HelloController {
     Label WinMsg;
     @FXML
     VBox VboxGame;
+    @FXML
+    Circle PlayerIndicator;
    
 
     @FXML
@@ -70,8 +74,19 @@ public class HelloController {
     protected void SwitchPlayer(){
         vierGewinnt.SwitchPlayer();
         PlayersTurnName.setText(vierGewinnt.GetCurrentPLayer().GetName());
-        String text= String.valueOf(vierGewinnt.GetCurrentPLayer().GetSymbol());
-        PlayersTurnSymbol.setText(text);
+        switch (vierGewinnt.GetCurrentPLayer().GetSymbol()){
+            case 'R':
+                    PlayerIndicator.setFill(Color.RED);
+                break;
+            case 'B':PlayerIndicator.setFill(Color.BLUE);
+                break;
+            case 'G':PlayerIndicator.setFill(Color.GREEN);
+                break;
+            case 'Y':PlayerIndicator.setFill(Color.YELLOW);
+                break;
+            case 'V':PlayerIndicator.setFill(Color.BLUEVIOLET);
+                break;
+        }
     }
 
 

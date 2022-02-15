@@ -15,7 +15,7 @@
             <Insets left="25.0" />
          </padding>
       </Label>
-      <VBox fx:id="VboxForLogin" layoutX="3.0" layoutY="4.0" prefHeight="171.0" prefWidth="355.0">
+      <VBox fx:id="VboxForLogin" layoutX="3.0" layoutY="4.0" prefHeight="228.0" prefWidth="355.0">
          <children>
             <HBox alignment="CENTER_RIGHT" prefHeight="98.0" prefWidth="365.0">
                <children>
@@ -48,12 +48,12 @@
                         <Insets left="10.0" top="32.0" />
                      </HBox.margin>
                   </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#ButtonPressed" text="S">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#ButtonPressed" text="Y" textFill="#fffb00">
                      <HBox.margin>
                         <Insets left="10.0" top="32.0" />
                      </HBox.margin>
                   </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#ButtonPressed" text="L" textFill="#9200ff">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#ButtonPressed" text="V" textFill="#9200ff">
                      <HBox.margin>
                         <Insets left="10.0" top="32.0" />
                      </HBox.margin>
@@ -62,7 +62,6 @@
             </HBox>
          </children>
       </VBox>
-      <Button fx:id="PlayerButton" layoutX="139.0" layoutY="207.0" mnemonicParsing="false" onAction="#CreatePlayer" text="Create Player" />
       <Label fx:id="ErrorMSG" alignment="CENTER" layoutX="-2.0" layoutY="232.0" prefHeight="17.0" prefWidth="364.0" textFill="RED" />
    </children>
 </AnchorPane>
