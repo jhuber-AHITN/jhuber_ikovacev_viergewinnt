@@ -25,6 +25,14 @@ public class Playfield {
     protected static int counter = 0;
 
     /**
+     * Gibt fieldArray zurück
+     * @return fieldArray
+     */
+    public char[][] getFieldArray() {
+        return fieldArray;
+    }
+
+    /**
      * Leert das Spielfeld
      */
     public void Clear() {

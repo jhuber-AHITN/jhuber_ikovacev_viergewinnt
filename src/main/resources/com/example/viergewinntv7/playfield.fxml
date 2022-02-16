@@ -1,10 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.viergewinntv7.HelloController">
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.viergewinntv7.HelloController">
    <children>
-      <Label layoutX="252.0" layoutY="191.0" text="Wittner Mega Toller Typ" />
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Circle fx:id="B00" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B10" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B20" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B30" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B40" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B50" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Circle fx:id="B01" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B11" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B21" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B31" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B41" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B51" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Circle fx:id="B02" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B12" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B22" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B32" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B42" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B52" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Circle fx:id="B03" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B13" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B23" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B33" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B43" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B53" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Circle fx:id="B04" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B14" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B24" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B34" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B44" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B54" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Circle fx:id="B05" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B15" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B25" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B35" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B45" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B55" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Circle fx:id="B06" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B16" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B26" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B36" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B46" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="B56" fill="WHITE" radius="33.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </VBox>
    </children>
-</AnchorPane>
+</HBox>
