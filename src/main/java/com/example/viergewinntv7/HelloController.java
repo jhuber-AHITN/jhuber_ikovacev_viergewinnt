@@ -21,6 +21,7 @@ import java.util.Objects;
 
 public class HelloController {
     protected  Game vierGewinnt;
+
     @FXML
     private Label welcomeText;
     @FXML
@@ -43,9 +44,11 @@ public class HelloController {
     }
     @FXML
     protected void Start(ActionEvent event) throws IOException {
-        URL u = getClass().getResource("playfield.fxml");
-        Pane newLoadedPane =        FXMLLoader.load(u);
-        HboxPlaying.getChildren().add(newLoadedPane);
+        if (vierGewinnt==null) {
+            URL u = getClass().getResource("playfield.fxml");
+            Pane newLoadedPane = FXMLLoader.load(u);
+            HboxPlaying.getChildren().add(newLoadedPane);
+        }
         vierGewinnt = new Game(new Player(UserLogin.player1name,UserLogin.player1symbol.charAt(0)), new Player(UserLogin.player2name,UserLogin.player2symbol.charAt(0)),new Playfield());
         vierGewinnt.RandomPlayer();
         SwitchPlayer();
