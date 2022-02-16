@@ -19,6 +19,9 @@
 
 package com.example.viergewinntv7.model;
 
+/**
+ * Player Klasse mit notwendigen Eigenschaften name und symbol
+ */
 public class Player {
     String name;
     Character symbol;

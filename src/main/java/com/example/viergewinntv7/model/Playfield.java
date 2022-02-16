@@ -5,30 +5,31 @@
 /**
  * Kurzbeschreibung
  *
- * @author  : jhuber, ikovacev
- * @date    : 03.02.2022
- *
- * @details
- *   Playfield Klasse die das Spielfeld mithilfe eines Arrays darstellt und die Züge mit dem counter mitzählt
- *
+ * @author : jhuber, ikovacev
+ * @date : 03.02.2022
+ * @details Playfield Klasse die das Spielfeld mithilfe eines Arrays darstellt und die Züge mit dem counter mitzählt
  */
-
-
-
 
 
 package com.example.viergewinntv7.model;
 
+/**
+ * Playfield Klasse die das Spielfeld mithilfe eines Arrays darstellt und die Züge mit dem counter mitzählt
+ */
 public class Playfield {
-    protected char[][] fieldArray = new char[6][7]; // TODO Wittner: Konstanten für Größe!!!
+    private static final int HÖHE = 6;
+    private static final int BREITE = 7;
+    private static final int UNENTSCHIEDEN = 42;
+
+    protected char[][] fieldArray = new char[HÖHE][BREITE];
     protected static int counter = 0;
 
     /**
      * Leert das Spielfeld
      */
     public void Clear() {
-        for (int i = 0; i < 6; i++) {   // TODO Wittner: Konstanten für Schleifen!!
-            for (int j = 0; j < 7; j++) {
+        for (int i = 0; i < HÖHE; i++) {
+            for (int j = 0; j < BREITE; j++) {
                 fieldArray[i][j] = ' ';
             }
         }
@@ -58,6 +59,7 @@ public class Playfield {
 
     /**
      * Sucht die erste freie Zeile in einer Spalte
+     *
      * @param col die Spalte
      * @return die Zeile
      */
@@ -75,8 +77,9 @@ public class Playfield {
 
     /**
      * Setzt eine bestimmte Zelle auf ein Symbol
-     * @param row die Zeile in der sich die Zelle befindet
-     * @param col die Spalte in der sich die Zelle befindet
+     *
+     * @param row    die Zeile in der sich die Zelle befindet
+     * @param col    die Spalte in der sich die Zelle befindet
      * @param symbol das Symbol auf das gesetzt wird
      */
     public void SetCell(int row, int col, char symbol) {
@@ -86,6 +89,7 @@ public class Playfield {
 
     /**
      * Löscht den Inhalt einer bestimmten Zelle
+     *
      * @param row die Zeile in der sich die Zelle befindet
      * @param col die Spalte in der sich die Zelle befindet
      */
@@ -96,6 +100,7 @@ public class Playfield {
 
     /**
      * Checkt ob ein Spieler gewonnen hat
+     *
      * @param toCheckIfWon der Spieler der gewonnen haben könnte
      * @return true-wenn gewonnen / false-wenn nicht gewonnen
      */
@@ -141,16 +146,11 @@ public class Playfield {
 
     /**
      * Checkt ob ein Unentschieden entstanden ist
+     *
      * @return true-wenn unentschieden / false-wenn nicht unentschieden
      */
     public boolean CheckDraw() {
-     /*   boolean ret = false;
-        if (counter == 42) {  // TODO Wittner: 42 durch Konstanten ersezten
-            ret = true;
-        }
-        return ret;
-
-      */
-        return counter==42; // TODO Wittner: es darf auch schön programmiert werden!
+        return counter == UNENTSCHIEDEN;
     }
+
 }

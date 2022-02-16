@@ -18,6 +18,9 @@
 
 package com.example.viergewinntv7.model;
 
+/**
+ * Gameklasse mit Methoden um das Spiel zu steuern
+ */
 public class Game {
     protected Player[] players = new Player[2];
     protected Player currentPLayer;
