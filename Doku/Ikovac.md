@@ -54,9 +54,16 @@ Was geaendert wurde: added FXML file, design added Playfield in "main" dxml file
 
 ---
 
-# 14.02.2022
+# 15.02.2022
 Autor: Kovacevic Ismael<br />
 geanderte Dateien: HelloController, hello-view.fxml,UserLogin;<br />
 Was geaendert wurde: Added UserLogin.fxml, buttons zum druecken fuer Eingabe <br />
+
+---
+
+# 16.02.2022
+Autor: Kovacevic Ismael<br />
+geanderte Dateien: HelloController, hello-view.fxml,UserLogin;<br />
+Was geaendert wurde: Labels/Buttons vorbereitet für die Ausgabe, USerLogin vorbereitet zum errtsellen der User <br />
 
 ---
