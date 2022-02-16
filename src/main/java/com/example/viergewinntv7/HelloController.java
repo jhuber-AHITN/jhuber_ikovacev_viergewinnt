@@ -49,7 +49,9 @@ public class HelloController {
             Pane newLoadedPane = FXMLLoader.load(u);
             HboxPlaying.getChildren().add(newLoadedPane);
         }
-        vierGewinnt = new Game(new Player(UserLogin.player1name,UserLogin.player1symbol.charAt(0)), new Player(UserLogin.player2name,UserLogin.player2symbol.charAt(0)),new Playfield());
+        Playfield playfield = new Playfield();
+        playfield.Clear();
+        vierGewinnt = new Game(new Player(UserLogin.player1name,UserLogin.player1symbol.charAt(0)), new Player(UserLogin.player2name,UserLogin.player2symbol.charAt(0)),playfield);
         vierGewinnt.RandomPlayer();
         SwitchPlayer();
     }
@@ -63,6 +65,7 @@ public class HelloController {
         }else {
             SwitchPlayer();
         }
+        System.out.println(vierGewinnt.GetPlayfield().toString());
     }
 
     protected void Win(){

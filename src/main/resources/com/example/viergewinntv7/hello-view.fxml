@@ -22,9 +22,14 @@
                         <children>
                            <HBox fx:id="HboxForButtons" prefHeight="27.0" prefWidth="475.0">
                               <children>
-                                 <Button mnemonicParsing="false" onAction="#PlaceStone" text="1">
+                                 <Button mnemonicParsing="false" onAction="#PlaceStone" text="0">
                                     <HBox.margin>
                                        <Insets left="25.0" />
+                                    </HBox.margin>
+                                 </Button>
+                                 <Button mnemonicParsing="false" onAction="#PlaceStone" text="1">
+                                    <HBox.margin>
+                                       <Insets left="50.0" />
                                     </HBox.margin>
                                  </Button>
                                  <Button mnemonicParsing="false" onAction="#PlaceStone" text="2">
