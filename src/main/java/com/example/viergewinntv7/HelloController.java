@@ -74,33 +74,7 @@ public class HelloController {
         vierGewinnt = new Game(new Player(UserLogin.player1name,UserLogin.player1symbol.charAt(0)), new Player(UserLogin.player2name,UserLogin.player2symbol.charAt(0)),playfield);
         vierGewinnt.RandomPlayer();
         SwitchPlayer();
-        char[][] field = vierGewinnt.GetPlayfield().getFieldArray();
-        Color color;
-        for (int i = 0; i < HÖHE; i++) {
-            for (int j = 0; j < BREITE; j++) {
-                switch (field[i][j]){
-                    case 'R':
-                        color = Color.RED;
-                        break;
-                    case 'B':
-                        color = Color.BLUE;
-                        break;
-                    case 'G':
-                        color = Color.GREEN;
-                        break;
-                    case 'Y':
-                        color = Color.YELLOW;
-                        break;
-                    case 'V':
-                        color = Color.BLUEVIOLET;
-                        break;
-                    default:
-                        color = Color.TRANSPARENT;
-                        break;
-                }
-                FieldViewGUI.UpdateCircle(color, circles[i][j]);
-            }
-        }
+        ColorCircles();
     }
     @FXML
     protected void PlaceStone(ActionEvent event){
@@ -112,6 +86,11 @@ public class HelloController {
             SwitchPlayer();
         }
 
+        ColorCircles();
+
+    }
+
+    public void ColorCircles() {
         char[][] field = vierGewinnt.GetPlayfield().getFieldArray();
         Color color;
         for (int i = 0; i < HÖHE; i++) {
@@ -139,7 +118,6 @@ public class HelloController {
                 FieldViewGUI.UpdateCircle(color, circles[i][j]);
             }
         }
-
     }
 
     protected void Win(){
@@ -150,33 +128,7 @@ public class HelloController {
     @FXML
     protected void UndoLastMove(){
         vierGewinnt.Undo();
-        char[][] field = vierGewinnt.GetPlayfield().getFieldArray();
-        Color color;
-        for (int i = 0; i < HÖHE; i++) {
-            for (int j = 0; j < BREITE; j++) {
-                switch (field[i][j]){
-                    case 'R':
-                        color = Color.RED;
-                        break;
-                    case 'B':
-                        color = Color.BLUE;
-                        break;
-                    case 'G':
-                        color = Color.GREEN;
-                        break;
-                    case 'Y':
-                        color = Color.YELLOW;
-                        break;
-                    case 'V':
-                        color = Color.BLUEVIOLET;
-                        break;
-                    default:
-                        color = Color.TRANSPARENT;
-                        break;
-                }
-                FieldViewGUI.UpdateCircle(color, circles[i][j]);
-            }
-        }
+        ColorCircles();
         SwitchPlayer();
 
     }
