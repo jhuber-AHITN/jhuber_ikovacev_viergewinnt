@@ -1,5 +1,9 @@
 package com.example.viergewinntv7;
 
+
+import com.example.viergewinntv7.view.EventView;
+import com.example.viergewinntv7.view.EventViewGUI;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -26,7 +30,8 @@ public class UserLogin {
     public static String player2symbol = "";
 
     protected Button choosenColor;
-
+    @FXML
+    EventViewGUI eventPrint = new EventViewGUI();
     @FXML
     TextField PlayerName;
     @FXML
@@ -52,10 +57,23 @@ public class UserLogin {
                 player2symbol = choosenColor.getText();
                 choosenColor.setDisable(true);
                 VboxForLogin.setVisible(false);
-                InfoText.setText("Close this window");
+                HelloController.eventLabel = InfoText;
+                eventPrint.PrintEvent("Close this window");
+                try {
+                    Stage stage = new Stage();
+                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+                    Scene scene = null;
+                    scene = new Scene(fxmlLoader.load());
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
 
             } else {
-                ErrorMSG.setText("Please don't use the same name as User1");
+                HelloController.eventLabel = ErrorMSG;
+                eventPrint.PrintEvent("Please don't use the same name as User1");
             }
 
 

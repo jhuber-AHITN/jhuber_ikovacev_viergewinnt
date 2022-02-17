@@ -3,7 +3,9 @@ package com.example.viergewinntv7;
 import com.example.viergewinntv7.model.Game;
 import com.example.viergewinntv7.model.Player;
 import com.example.viergewinntv7.model.Playfield;
+import com.example.viergewinntv7.view.EventViewGUI;
 import com.example.viergewinntv7.view.FieldViewGUI;
+import com.example.viergewinntv7.view.PlayerViewGUI;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +26,11 @@ import java.util.Objects;
 
 public class HelloController {
     protected  Game vierGewinnt;
+    protected PlayerViewGUI playerPrint;
+    protected EventViewGUI eventPrint;
     PlayfieldController pfc;
+    public static Label eventLabel;
+
 
     @FXML
     private Label welcomeText;
@@ -51,6 +57,8 @@ public class HelloController {
     }
     @FXML
     protected void Start(ActionEvent event) throws IOException {
+        playerPrint = new PlayerViewGUI(PlayersTurnName,PlayerIndicator);
+        eventPrint = new EventViewGUI();
         if (vierGewinnt==null) {
             URL u = getClass().getResource("playfield.fxml");
             Pane newLoadedPane = FXMLLoader.load(u);
@@ -60,11 +68,39 @@ public class HelloController {
         pfc = PlayfieldController.getPlayfieldController();
         circles = pfc.getCircles();
 
+
         Playfield playfield = new Playfield();
         playfield.Clear();
         vierGewinnt = new Game(new Player(UserLogin.player1name,UserLogin.player1symbol.charAt(0)), new Player(UserLogin.player2name,UserLogin.player2symbol.charAt(0)),playfield);
         vierGewinnt.RandomPlayer();
         SwitchPlayer();
+        char[][] field = vierGewinnt.GetPlayfield().getFieldArray();
+        Color color;
+        for (int i = 0; i < HÖHE; i++) {
+            for (int j = 0; j < BREITE; j++) {
+                switch (field[i][j]){
+                    case 'R':
+                        color = Color.RED;
+                        break;
+                    case 'B':
+                        color = Color.BLUE;
+                        break;
+                    case 'G':
+                        color = Color.GREEN;
+                        break;
+                    case 'Y':
+                        color = Color.YELLOW;
+                        break;
+                    case 'V':
+                        color = Color.BLUEVIOLET;
+                        break;
+                    default:
+                        color = Color.TRANSPARENT;
+                        break;
+                }
+                FieldViewGUI.UpdateCircle(color, circles[i][j]);
+            }
+        }
     }
     @FXML
     protected void PlaceStone(ActionEvent event){
@@ -108,7 +144,8 @@ public class HelloController {
 
     protected void Win(){
         VboxGame.setVisible(false);
-        WinMsg.setText(vierGewinnt.GetCurrentPLayer().GetName()+" Won the Game!");
+        eventLabel = WinMsg;
+        eventPrint.PrintEvent(vierGewinnt.GetCurrentPLayer().GetName()+" Won the Game!");
     }
     @FXML
     protected void UndoLastMove(){
@@ -117,21 +154,9 @@ public class HelloController {
     }
     protected void SwitchPlayer(){
         vierGewinnt.SwitchPlayer();
-        PlayersTurnName.setText(vierGewinnt.GetCurrentPLayer().GetName());
-        switch (vierGewinnt.GetCurrentPLayer().GetSymbol()){
-            case 'R':
-                    PlayerIndicator.setFill(Color.RED);
-                break;
-            case 'B':PlayerIndicator.setFill(Color.BLUE);
-                break;
-            case 'G':PlayerIndicator.setFill(Color.GREEN);
-                break;
-            case 'Y':PlayerIndicator.setFill(Color.YELLOW);
-                break;
-            case 'V':PlayerIndicator.setFill(Color.BLUEVIOLET);
-                break;
-        }
+        playerPrint.PrintPlay(vierGewinnt.GetCurrentPLayer());
     }
+
 
 
 
