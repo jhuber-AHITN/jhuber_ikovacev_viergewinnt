@@ -13,13 +13,15 @@
  */
 package com.example.viergewinntv7.view;
 
+import com.example.viergewinntv7.model.Player;
+
 public class PlayerViewConsole implements PlayerView{
 
     @Override
     /**
      * Gibt mitgegeben Spielernamen aus
      */
-    public void PrintPlay(String player) {
-        System.out.print(player);
+    public void PrintPlay(Player player) {
+        System.out.print(player.GetName());
     }
 }

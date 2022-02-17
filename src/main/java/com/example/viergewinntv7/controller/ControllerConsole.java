@@ -46,8 +46,8 @@ public class ControllerConsole {
 
             while (!fourWins.GetPlayfield().CheckWin(fourWins.GetCurrentPLayer()) && !fourWins.GetPlayfield().CheckDraw()) {
                 fourWins.SwitchPlayer();
-                do {
-                    playerView.PrintPlay("\n" + fourWins.GetCurrentPLayer().GetName());
+                do {event.PrintEvent("\n");
+                    playerView.PrintPlay(fourWins.GetCurrentPLayer());
                     event.PrintEvent(" Select a column to place your Symbol: \n");
                     fourWins.SwitchPlayer();
                     event.PrintEvent("If " + fourWins.GetCurrentPLayer().GetName() + " wants to undo their move press \"u\":\n");
