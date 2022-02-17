@@ -21,5 +21,5 @@ Was geaendert wurde: In Zusammenarbeit mit Kovacevic Model Klassen und Konsolen 
 # 16.02.2022<br />
 Autor: Huber Julian<br />
 geanderte Dateien: Playfield.java, Playfield.fxml, HelloController.java;<br />
-Was geaendert wurde: getPlayField Methode für Playfieldklasse erstellt, Playfield.fxml im Scenebuilder angefertigt, Stundenlang versucht, das Spielfeld mit den Circles in der fxml Datei anzuzeigen(am schluss wegen errors alles versucht zu hardcoden aber immer noch nicht versucht weil die Circles aus was für einem Grund auch immer NULL sind)<br />
+Was geaendert wurde: getPlayField Methode für Playfieldklasse erstellt, Playfield.fxml im Scenebuilder angefertigt, Stundenlang versucht, das Spielfeld mit den Circles in der fxml Datei anzuzeigen(am Schluss wegen Errors alles versucht zu hardcoden aber immer noch nicht funktioniert weil die Circles aus was für einem Grund auch immer NULL sind)<br />
 
