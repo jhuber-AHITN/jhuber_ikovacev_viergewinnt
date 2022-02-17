@@ -3,6 +3,7 @@ package com.example.viergewinntv7;
 import com.example.viergewinntv7.model.Game;
 import com.example.viergewinntv7.model.Player;
 import com.example.viergewinntv7.model.Playfield;
+import com.example.viergewinntv7.view.FieldViewGUI;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -99,7 +100,7 @@ public class HelloController {
                         color = Color.TRANSPARENT;
                         break;
                 }
-                circles[i][j].setFill(color);
+                FieldViewGUI.UpdateCircle(color, circles[i][j]);
             }
         }
 
