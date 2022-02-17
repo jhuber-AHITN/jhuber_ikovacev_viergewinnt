@@ -107,8 +107,6 @@ public class PlayfieldController {
     public void initialize(){
         playfieldController = this;
         circles[0][0] = B00;
-        System.out.println("circles00: " + circles[0][0]);
-        System.out.println("B00: " + B00);
         circles[0][1] = B01;
         circles[0][2] = B02;
         circles[0][3] = B03;
