@@ -68,7 +68,6 @@ public class HelloController {
     @FXML
     protected void PlaceStone(ActionEvent event){
         Button buttonPressed = (Button) event.getSource();
-        System.out.println(buttonPressed.getText());
         vierGewinnt.Set(Integer.parseInt(buttonPressed.getText()));
         if (vierGewinnt.GetPlayfield().CheckWin(vierGewinnt.GetCurrentPLayer())){
             Win();
@@ -100,8 +99,6 @@ public class HelloController {
                         color = Color.TRANSPARENT;
                         break;
                 }
-                System.out.println(Arrays.deepToString(circles));
-                System.out.println(circles[i][j]);
                 circles[i][j].setFill(color);
             }
         }
