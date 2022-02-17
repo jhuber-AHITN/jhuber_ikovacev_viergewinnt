@@ -1,9 +1,12 @@
 package com.example.viergewinntv7.view;
 
-public class FieldViewGUI implements FieldView {
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
-    @Override
-    public void Prientfield(String field) {
-
+public class FieldViewGUI {
+    static public void UpdateCircle(Color color, Circle circle){
+        circle.setFill(color);
     }
+
+
 }
